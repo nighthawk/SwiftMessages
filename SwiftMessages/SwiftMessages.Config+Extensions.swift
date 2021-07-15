@@ -22,11 +22,7 @@ extension SwiftMessages.Config {
         switch presentationContext {
         case .windowScene(let scene, _): return scene
         default:
-            #if SWIFTMESSAGES_APP_EXTENSIONS
             return nil
-            #else
-            return UIWindow.keyWindow?.windowScene
-            #endif
         }
     }
 

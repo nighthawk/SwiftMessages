@@ -35,9 +35,6 @@ open class WindowViewController: UIViewController
     func install() {
         if #available(iOS 13, *) {
             window?.windowScene = config.windowScene
-            #if !SWIFTMESSAGES_APP_EXTENSIONS
-            previousKeyWindow = UIWindow.keyWindow
-            #endif
             show(
                 becomeKey: config.shouldBecomeKeyWindow,
                 frame: config.windowScene?.coordinateSpace.bounds
